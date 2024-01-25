@@ -15,6 +15,8 @@ namespace Tweaker11
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("SegoeUI.ttf", "SegoeUI");
+                    fonts.AddFont("SegoeUIBold.ttf", "SegoeUIBold");
                 });
 
 #if DEBUG
@@ -26,6 +28,8 @@ namespace Tweaker11
 
             // View models.
             builder.Services.AddSingleton<MainPageViewModel>();
+            builder.Services.AddSingleton<HomeViewModel>();
+            builder.Services.AddSingleton<ApplicationsViewModel>();
 
             return builder.Build();
         }

@@ -5,10 +5,74 @@
              x:Class="Tweaker11.App">
     <Application.Resources>
         <ResourceDictionary>
+            
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Colors -->
+            <Color x:Key="colorNavPointerOver">#2D2D2D</Color>
+            <Color x:Key="colorNavSelected">#DB9EE5</Color>
+
+            <!-- Navigation - Border -->
+            <Style x:Key="navBorder" TargetType="Border">
+                <Setter Property="HeightRequest" Value="36" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 5" />
+                <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+                <Setter Property="Margin" Value="0, 0, 0, 5" />
+
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CustomStates">
+
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="Transparent" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!-- Navigation - Background -->
+            <Style x:Key="navBackground" TargetType="HorizontalStackLayout">
+                <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+            </Style>
+
+            <!-- Navigation - Selected -->
+            <Style x:Key="navSelected" TargetType="Border">
+                <Setter Property="WidthRequest" Value="5" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 3" />
+                <Setter Property="BackgroundColor" Value="{StaticResource colorNavSelected}" />
+                <Setter Property="Margin" Value="0, 9, 0, 9" />
+            </Style>
+
+            <!-- Navigation - Image -->
+            <Style x:Key="navImage" TargetType="Image">
+                <Setter Property="WidthRequest" Value="22" />
+                <Setter Property="HeightRequest" Value="22" />
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="Margin" Value="9, 0, 14, 0" />
+            </Style>
+
+            <!-- Navigation - Text -->
+            <Style x:Key="navText" TargetType="Label">
+                <Setter Property="FontFamily" Value="SegoeUI" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
