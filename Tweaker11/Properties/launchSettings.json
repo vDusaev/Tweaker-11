@@ -2,7 +2,10 @@
   "profiles": {
     "Windows Machine": {
       "commandName": "MsixPackage",
-      "nativeDebugging": false
+      "nativeDebugging": false,
+      "remoteDebugEnabled": true,
+      "remoteDebugMachine": "DESKTOP-V3OTERK",
+      "authenticationMode": "Windows"
     }
   }
 }

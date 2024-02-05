@@ -9,10 +9,10 @@
 
     <VerticalStackLayout
         IsVisible="{Binding IsVisible}">
-        
+
         <Label 
             Text="Application" />
-        
+
     </VerticalStackLayout>
 
 </ContentView>
