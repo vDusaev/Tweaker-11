@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tweaker11.Controls.ElementControl"
+             
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Name="Parent">
+
+    <ContentView.ControlTemplate>
+        <ControlTemplate>
+
+            <Border
+                Style="{StaticResource elementBorder}">
+
+                <Grid
+                    ColumnDefinitions="*, Auto">
+
+                    <HorizontalStackLayout
+                        Grid.Column="0">
+
+                        <Image 
+                            Source="{TemplateBinding Image}"
+                            IsVisible="{TemplateBinding ImageVisible}"
+                            Style="{StaticResource elementImage}" />
+
+                        <Label 
+                            Text="{TemplateBinding Text}"
+                            Style="{StaticResource elementText}" />
+
+                    </HorizontalStackLayout>
+
+                    <HorizontalStackLayout
+                        Grid.Column="1">
+
+                        <Image 
+                            IsVisible="{TemplateBinding RefreshVisible}"
+                            Style="{StaticResource elementImageRefresh}">
+
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="RefreshTapped" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+                        <Image 
+                            IsVisible="{TemplateBinding TrashVisible}"
+                            Style="{StaticResource elementImageTrash}">
+
+                            <Image.Behaviors>
+                                <toolkit:IconTintColorBehavior TintColor="White" />
+                            </Image.Behaviors>
+
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TrashTapped" />
+                            </Image.GestureRecognizers>
+
+                        </Image>
+
+                    </HorizontalStackLayout>
+
+                </Grid>
+
+            </Border>
+
+        </ControlTemplate>
+    </ContentView.ControlTemplate>
+
+</ContentView>

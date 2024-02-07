@@ -11,7 +11,8 @@
         IsVisible="{Binding IsVisible}">
         
         <Label 
-            Text="Home" />
+            Text="Home"
+            Style="{StaticResource title}"/>
         
     </VerticalStackLayout>
 

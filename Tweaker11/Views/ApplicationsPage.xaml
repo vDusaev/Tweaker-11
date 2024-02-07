@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tweaker11.Views.ApplicationsPage"
              
+             xmlns:controls="clr-namespace:Tweaker11.Controls"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
 
              x:DataType="viewModels:ApplicationsViewModel">
@@ -11,7 +12,16 @@
         IsVisible="{Binding IsVisible}">
 
         <Label 
-            Text="Application" />
+            Text="Applications"
+            Style="{StaticResource title}"/>
+
+        <controls:ElementControl 
+            Image="paint.png" 
+            Text="Paint"
+            RefreshVisible="True"
+            TrashVisible="True"
+            EventRefresh="RefreshTapped"
+            EventTrash="TrashTapped" />
 
     </VerticalStackLayout>
 

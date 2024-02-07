@@ -31,7 +31,7 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
-		<BaseOutputPath>\\DESKTOP-V3OTERK\Debug\Tweaker 11</BaseOutputPath>
+		<BaseOutputPath></BaseOutputPath>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\ElementControl.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\NavigationControl.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

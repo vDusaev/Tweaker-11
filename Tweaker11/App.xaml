@@ -14,6 +14,17 @@
             <!-- Colors -->
             <Color x:Key="colorNavPointerOver">#2D2D2D</Color>
             <Color x:Key="colorNavSelected">#DB9EE5</Color>
+            <Color x:Key="colorElementBackgound">#2b2b2b</Color>
+            <Color x:Key="colorElementPointerOver">#323232</Color>
+
+            <!-- Title -->
+            <Style x:Key="title" TargetType="Label">
+                <Setter Property="FontFamily" Value="SegoeUIBold" />
+                <Setter Property="FontSize" Value="28" />
+                <Setter Property="MinimumWidthRequest" Value="500" />
+                <Setter Property="MaximumWidthRequest" Value="1000" />
+                <Setter Property="Margin" Value="0, 0, 0, 30" />
+            </Style>
 
             <!-- Navigation - Border -->
             <Style x:Key="navBorder" TargetType="Border">
@@ -71,6 +82,71 @@
                 <Setter Property="FontFamily" Value="SegoeUI" />
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!-- Element - Border -->
+            <Style x:Key="elementBorder" TargetType="Border">
+                <Setter Property="HeightRequest" Value="75" />
+                <Setter Property="MinimumWidthRequest" Value="500" />
+                <Setter Property="MaximumWidthRequest" Value="1000" />
+                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 5" />
+                <Setter Property="Padding" Value="0, 0, 10, 0" />
+                <Setter Property="BackgroundColor" Value="{StaticResource colorElementBackgound}" />
+
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CustomStates">
+
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource colorElementBackgound}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{StaticResource colorElementPointerOver}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+
+            <!-- Element - Image -->
+            <Style x:Key="elementImage" TargetType="Image">
+                <Setter Property="WidthRequest" Value="25" />
+                <Setter Property="HeightRequest" Value="25" />
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="Margin" Value="15, 0, 0, 0" />
+            </Style>
+
+            <!-- Element - Text -->
+            <Style x:Key="elementText" TargetType="Label">
+                <Setter Property="FontFamily" Value="SegoeUI" />
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Margin" Value="15, 0, 0, 0" />
+            </Style>
+
+            <!-- Element - Image trash -->
+            <Style x:Key="elementImageTrash" TargetType="Image">
+                <Setter Property="Source" Value="trash.png" />
+                <Setter Property="WidthRequest" Value="20" />
+                <Setter Property="HeightRequest" Value="20" />
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="Margin" Value="10, 0, 10, 0" />
+            </Style>
+
+            <!-- Element - Image refresh -->
+            <Style x:Key="elementImageRefresh" TargetType="Image">
+                <Setter Property="Source" Value="refresh.png" />
+                <Setter Property="WidthRequest" Value="26" />
+                <Setter Property="HeightRequest" Value="26" />
+                <Setter Property="Aspect" Value="AspectFill" />
+                <Setter Property="Margin" Value="10, 0, 10, 0" />
             </Style>
 
         </ResourceDictionary>
