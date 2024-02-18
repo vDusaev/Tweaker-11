@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000143574995824880572400000006944137131526532481_);}
+	.st2{fill:url(#SVGID_00000040538715442323671850000014678122350134198693_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="14.5669" y1="499.4331" x2="439.4491" y2="74.5509" gradientTransform="matrix(1 0 0 -1 0 514)">
+	<stop  offset="0" style="stop-color:#F7DE15"/>
+	<stop  offset="1" style="stop-color:#FCD012"/>
+</linearGradient>
+<path class="st0" d="M369.4,511.15H29.2c-15.66,0-28.35-12.69-28.35-28.35V29.2c0-15.66,12.69-28.35,28.35-28.35h453.6
+	c15.66,0,28.35,12.69,28.35,28.35v340.2L369.4,511.15z"/>
+<linearGradient id="SVGID_00000045594493528083304990000008820270769262610849_" gradientUnits="userSpaceOnUse" x1="386.4065" y1="127.5935" x2="482.5182" y2="31.4817" gradientTransform="matrix(1 0 0 -1 0 514)">
+	<stop  offset="0" style="stop-color:#E4A514"/>
+	<stop  offset="0.1158" style="stop-color:#E8A812"/>
+	<stop  offset="0.5953" style="stop-color:#F4B30D"/>
+	<stop  offset="1" style="stop-color:#F7B70D"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000045594493528083304990000008820270769262610849_);" d="M482.8,511.15H256L511.15,256v226.8
+	C511.15,498.46,498.46,511.15,482.8,511.15z"/>
+<linearGradient id="SVGID_00000110470999466468529490000017896900178262616215_" gradientUnits="userSpaceOnUse" x1="264.4384" y1="249.5617" x2="387.0302" y2="126.9698" gradientTransform="matrix(1 0 0 -1 0 514)">
+	<stop  offset="0" style="stop-color:#4B4B4B"/>
+	<stop  offset="1" style="stop-color:#3B3B3B"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000110470999466468529490000017896900178262616215_);" d="M284.35,256h226.8L256,511.15v-226.8
+	C256,268.69,268.69,256,284.35,256z"/>
+</svg>

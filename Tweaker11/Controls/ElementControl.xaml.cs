@@ -2,6 +2,23 @@ namespace Tweaker11.Controls;
 
 public partial class ElementControl : ContentView
 {
+    // Name.
+    //
+    public static readonly BindableProperty NameProperty = BindableProperty.Create(
+        "Name",
+        typeof(string),
+        typeof(ElementControl),
+        "",
+        BindingMode.OneWay,
+        null,
+        null);
+
+    public string Name
+    {
+        get => (string)this.GetValue(NameProperty);
+        set => this.SetValue(NameProperty, value);
+    }
+
     // Image.
     //
     public static readonly BindableProperty ImageProperty = BindableProperty.Create(
@@ -43,10 +60,10 @@ public partial class ElementControl : ContentView
         set => this.SetValue(TextProperty, value);
     }
 
-    // Trash visible.
+    // Restore visible.
     //
-    public static readonly BindableProperty TrashVisibleProperty = BindableProperty.Create(
-        "TrashVisible",
+    public static readonly BindableProperty RestoreVisibleProperty = BindableProperty.Create(
+        "RestoreVisible",
         typeof(bool),
         typeof(ElementControl),
         false,
@@ -54,16 +71,16 @@ public partial class ElementControl : ContentView
         null,
         null);
 
-    public bool TrashVisible
+    public bool RestoreVisible
     {
-        get => (bool)this.GetValue(TrashVisibleProperty);
-        set => this.SetValue(TrashVisibleProperty, value);
+        get => (bool)this.GetValue(RestoreVisibleProperty);
+        set => this.SetValue(RestoreVisibleProperty, value);
     }
 
-    // Refresh visible.
+    // Restore active.
     //
-    public static readonly BindableProperty RefreshVisibleProperty = BindableProperty.Create(
-        "RefreshVisible",
+    public static readonly BindableProperty RestoreActiveProperty = BindableProperty.Create(
+        "RestoreActive",
         typeof(bool),
         typeof(ElementControl),
         false,
@@ -71,27 +88,101 @@ public partial class ElementControl : ContentView
         null,
         null);
 
-    public bool RefreshVisible
+    public bool RestoreActive
     {
-        get => (bool)this.GetValue(RefreshVisibleProperty);
-        set => this.SetValue(RefreshVisibleProperty, value);
+        get => (bool)this.GetValue(RestoreActiveProperty);
+        set => this.SetValue(RestoreActiveProperty, value);
     }
 
-    public event EventHandler<EventArgs> EventRefresh;
-    public event EventHandler<EventArgs> EventTrash;
+    // Remove visible.
+    //
+    public static readonly BindableProperty RemoveVisibleProperty = BindableProperty.Create(
+        "RemoveVisible",
+        typeof(bool),
+        typeof(ElementControl),
+        false,
+        BindingMode.OneWay,
+        null,
+        null);
+
+    public bool RemoveVisible
+    {
+        get => (bool)this.GetValue(RemoveVisibleProperty);
+        set => this.SetValue(RemoveVisibleProperty, value);
+    }
+
+    // Remove active.
+    //
+    public static readonly BindableProperty RemoveActiveProperty = BindableProperty.Create(
+        "RemoveActive",
+        typeof(bool),
+        typeof(ElementControl),
+        false,
+        BindingMode.OneWay,
+        null,
+        null);
+
+    public bool RemoveActive
+    {
+        get => (bool)this.GetValue(RemoveActiveProperty);
+        set => this.SetValue(RemoveActiveProperty, value);
+    }
+
+    // Delete visible.
+    //
+    public static readonly BindableProperty DeleteVisibleProperty = BindableProperty.Create(
+        "DeleteVisible",
+        typeof(bool),
+        typeof(ElementControl),
+        false,
+        BindingMode.OneWay,
+        null,
+        null);
+
+    public bool DeleteVisible
+    {
+        get => (bool)this.GetValue(DeleteVisibleProperty);
+        set => this.SetValue(DeleteVisibleProperty, value);
+    }
+
+    // Delete active.
+    //
+    public static readonly BindableProperty DeleteActiveProperty = BindableProperty.Create(
+        "DeleteActive",
+        typeof(bool),
+        typeof(ElementControl),
+        false,
+        BindingMode.OneWay,
+        null,
+        null);
+
+    public bool DeleteActive
+    {
+        get => (bool)this.GetValue(DeleteActiveProperty);
+        set => this.SetValue(DeleteActiveProperty, value);
+    }
+
+    public event EventHandler<EventArgs> EventRestore;
+    public event EventHandler<EventArgs> EventRemove;
+    public event EventHandler<EventArgs> EventDelete;
 
     public ElementControl()
 	{
 		InitializeComponent();
 	}
 
-    private void RefreshTapped(object sender, EventArgs e)
+    private void RestoreTapped(object sender, EventArgs e)
     {
-        EventRefresh?.Invoke(this, e);
+        EventRestore?.Invoke(this, e);
     }
 
-    private void TrashTapped(object sender, EventArgs e)
+    private void RemoveTapped(object sender, EventArgs e)
     {
-        EventTrash?.Invoke(this, e);
+        EventRemove?.Invoke(this, e);
+    }
+
+    private void DeleteTapped(object sender, EventArgs e)
+    {
+        EventDelete?.Invoke(this, e);
     }
 }

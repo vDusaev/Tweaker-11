@@ -34,6 +34,10 @@
 		<BaseOutputPath></BaseOutputPath>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-windows10.0.19041.0|AnyCPU'">
+	  <DefineConstants>$(DefineConstants);\\DESKTOP-V3OTERK\Debug\Tweaker 11</DefineConstants>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -58,8 +62,6 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-		<PackageReference Include="Microsoft.PowerShell.SDK" Version="7.5.0-preview.1" />
-		<PackageReference Include="System.Management.Automation" Version="7.5.0-preview.1" />
 	</ItemGroup>
 
 	<ItemGroup>

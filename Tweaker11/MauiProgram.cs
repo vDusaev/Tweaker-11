@@ -31,9 +31,6 @@ namespace Tweaker11
             builder.Services.AddSingleton<HomeViewModel>();
             builder.Services.AddSingleton<ApplicationsViewModel>();
 
-            // Services.
-            builder.Services.AddSingleton<PowerShellServices>();
-
             return builder.Build();
         }
     }

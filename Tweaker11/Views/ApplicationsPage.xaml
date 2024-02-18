@@ -4,6 +4,7 @@
              x:Class="Tweaker11.Views.ApplicationsPage"
              
              xmlns:controls="clr-namespace:Tweaker11.Controls"
+             xmlns:models="clr-namespace:Tweaker11.Models"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
 
              x:DataType="viewModels:ApplicationsViewModel">
@@ -15,13 +16,31 @@
             Text="Applications"
             Style="{StaticResource title}"/>
 
-        <controls:ElementControl 
-            Image="paint.png" 
-            Text="Paint"
-            RefreshVisible="True"
-            TrashVisible="True"
-            EventRefresh="RefreshTapped"
-            EventTrash="TrashTapped" />
+        <CollectionView
+            ItemsSource="{Binding Applications}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:ApplicationItem">
+
+                    <controls:ElementControl 
+                        Name="{Binding Name}"
+                        Image="{Binding Image}"
+                        Text="{Binding Text}"
+                        RestoreVisible="True"
+                        RemoveVisible="True"
+                        DeleteVisible="True"
+                        RestoreActive="{Binding RestoreActive}"
+                        RemoveActive="{Binding RemoveActive}"
+                        DeleteActive="{Binding DeleteActive}"
+                        EventRestore="RestoreTapped"
+                        EventRemove="RemoveTapped"
+                        EventDelete="DeleteTapped" />
+                    
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
 
     </VerticalStackLayout>
 

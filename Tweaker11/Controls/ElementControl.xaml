@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tweaker11.Controls.ElementControl"
              
+             xmlns:converter="clr-namespace:Tweaker11.Converter"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             x:Name="Parent">
+             
+             x:Name="this">
 
     <ContentView.ControlTemplate>
         <ControlTemplate>
@@ -32,33 +34,50 @@
                     <HorizontalStackLayout
                         Grid.Column="1">
 
-                        <Image 
-                            IsVisible="{TemplateBinding RefreshVisible}"
-                            Style="{StaticResource elementImageRefresh}">
+                        <Border
+                            Style="{StaticResource elementButton}"
+                            IsVisible="{TemplateBinding RestoreVisible}"
+                            IsEnabled="{TemplateBinding RestoreActive}">
 
-                            <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="White" />
-                            </Image.Behaviors>
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="RestoreTapped" />
+                            </Border.GestureRecognizers>
+                            
+                            <Label 
+                                Text="Restore"
+                                Style="{StaticResource elementButtonText}"/>
 
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="RefreshTapped" />
-                            </Image.GestureRecognizers>
+                        </Border>
 
-                        </Image>
+                        <Border
+                            Style="{StaticResource elementButton}"
+                            IsVisible="{TemplateBinding DeleteVisible}"
+                            IsEnabled="{TemplateBinding DeleteActive}">
 
-                        <Image 
-                            IsVisible="{TemplateBinding TrashVisible}"
-                            Style="{StaticResource elementImageTrash}">
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="DeleteTapped" />
+                            </Border.GestureRecognizers>
 
-                            <Image.Behaviors>
-                                <toolkit:IconTintColorBehavior TintColor="White" />
-                            </Image.Behaviors>
+                            <Label 
+                                Text="Delete"
+                                Style="{StaticResource elementButtonText}"/>
 
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TrashTapped" />
-                            </Image.GestureRecognizers>
+                        </Border>
 
-                        </Image>
+                        <Border
+                            Style="{StaticResource elementButton}"
+                            IsVisible="{TemplateBinding RemoveVisible}"
+                            IsEnabled="{TemplateBinding RemoveActive}">
+
+                            <Border.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="RemoveTapped" />
+                            </Border.GestureRecognizers>
+
+                            <Label 
+                                Text="Remove"
+                                Style="{StaticResource elementButtonText}"/>
+
+                        </Border>
 
                     </HorizontalStackLayout>
 

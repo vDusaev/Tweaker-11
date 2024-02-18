@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace Tweaker11.ViewModels;
+﻿namespace Tweaker11.ViewModels;
 
 public partial class MainPageViewModel : ObservableObject
 {
@@ -14,13 +12,8 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     private ApplicationsViewModel _applicationsViewModel;
 
-    private PowerShellServices _powerShellServices;
-
-    public MainPageViewModel(HomeViewModel homeViewModel, ApplicationsViewModel applicationsViewModel, 
-        PowerShellServices powerShellServices)
+    public MainPageViewModel(HomeViewModel homeViewModel, ApplicationsViewModel applicationsViewModel)
     {
-        _powerShellServices = powerShellServices;
-
         // Home page.
         _homeViewModel = homeViewModel;
         _homeViewModel.IsVisible = true;
@@ -29,7 +22,7 @@ public partial class MainPageViewModel : ObservableObject
 
         // Applications page.
         _applicationsViewModel = applicationsViewModel;
-        _applicationsViewModel.SetApplicationsService(new ApplicationsService(_powerShellServices));
+        _applicationsViewModel.SetApplicationsService(new ApplicationsService());
         _applicationsViewModel.Initialize();
     }
 

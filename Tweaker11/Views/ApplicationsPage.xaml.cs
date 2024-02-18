@@ -7,13 +7,18 @@ public partial class ApplicationsPage : ContentView
 		InitializeComponent();
     }
 
-    private void RefreshTapped(object sender, EventArgs e)
+    private async void RestoreTapped(object sender, EventArgs e)
     {
-        ((ApplicationsViewModel)BindingContext).RefreshTapped(sender, e);
+        await ((ApplicationsViewModel)BindingContext).RestoreTapped(sender, e);
     }
 
-    private void TrashTapped(object sender, EventArgs e)
+    private async void RemoveTapped(object sender, EventArgs e)
     {
-        ((ApplicationsViewModel)BindingContext).TrashTapped(sender, e);
+        await ((ApplicationsViewModel)BindingContext).RemoveTapped(sender, e);
+    }
+
+    private async void DeleteTapped(object sender, EventArgs e)
+    {
+        await ((ApplicationsViewModel)BindingContext).DeleteTapped(sender, e);
     }
 }
