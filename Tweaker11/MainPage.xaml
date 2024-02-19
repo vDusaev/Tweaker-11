@@ -9,7 +9,9 @@
              
              x:DataType="viewModels:MainPageViewModel"
              
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             
+             BackgroundColor="{AppThemeBinding Light={StaticResource lightBackground}, Dark={StaticResource darkBackground}}">
 
     <Grid
         Margin="10, 10, 10, 0"

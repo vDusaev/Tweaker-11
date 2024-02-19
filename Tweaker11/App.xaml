@@ -12,11 +12,22 @@
             </ResourceDictionary.MergedDictionaries>
 
             <!-- Colors -->
-            <Color x:Key="colorNavPointerOver">#2D2D2D</Color>
-            <Color x:Key="colorNavSelected">#DB9EE5</Color>
-            <Color x:Key="colorNavSelectedDark">#CC66CC</Color>
-            <Color x:Key="colorElementBackgound">#2b2b2b</Color>
-            <Color x:Key="colorElementPointerOver">#323232</Color>
+            <Color x:Key="lightBackground">#F3F3F3</Color>
+            <Color x:Key="darkBackground">#202020</Color>
+            <Color x:Key="lightNavPointerOver">#EAEAEA</Color>
+            <Color x:Key="darkNavPointerOver">#2D2D2D</Color>
+            <Color x:Key="NavSelected">#DB9EE5</Color>
+            <Color x:Key="NavSelectedDark">#CC66CC</Color>
+            <Color x:Key="lightElementBackgound">#FBFBFB</Color>
+            <Color x:Key="darkElementBackgound">#2B2B2B</Color>
+            <Color x:Key="lightElementPointerOver">#F6F6F6</Color>
+            <Color x:Key="darkElementPointerOver">#323232</Color>
+            <Color x:Key="lightButtonBackgound">#FEFEFE</Color>
+            <Color x:Key="lightButtonBackgoundDisabled">#FAFAFA</Color>
+            <Color x:Key="lightButtonBackgoundPointerOver">#F8F8F8</Color>
+            <Color x:Key="darkButtonBackgound">#373737</Color>
+            <Color x:Key="darkButtonBackgoundDisabled">#343434</Color>
+            <Color x:Key="darkButtonBackgoundPointerOver">#434343</Color>
 
             <!-- Title -->
             <Style x:Key="title" TargetType="Label">
@@ -32,7 +43,7 @@
                 <Setter Property="HeightRequest" Value="36" />
                 <Setter Property="StrokeThickness" Value="0" />
                 <Setter Property="StrokeShape" Value="RoundRectangle 5" />
-                <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightNavPointerOver}, Dark={StaticResource darkNavPointerOver}}" />
                 <Setter Property="Margin" Value="0, 0, 0, 5" />
 
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -47,7 +58,7 @@
 
                             <VisualState x:Name="PointerOver">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightNavPointerOver}, Dark={StaticResource darkNavPointerOver}}" />
                                 </VisualState.Setters>
                             </VisualState>
                             
@@ -58,7 +69,7 @@
 
             <!-- Navigation - Background -->
             <Style x:Key="navBackground" TargetType="HorizontalStackLayout">
-                <Setter Property="BackgroundColor" Value="{StaticResource colorNavPointerOver}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightNavPointerOver}, Dark={StaticResource darkNavPointerOver}}" />
             </Style>
 
             <!-- Navigation - Selected -->
@@ -66,7 +77,7 @@
                 <Setter Property="WidthRequest" Value="5" />
                 <Setter Property="StrokeThickness" Value="0" />
                 <Setter Property="StrokeShape" Value="RoundRectangle 3" />
-                <Setter Property="BackgroundColor" Value="{StaticResource colorNavSelected}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource NavSelected}" />
                 <Setter Property="Margin" Value="0, 9, 0, 9" />
             </Style>
 
@@ -94,7 +105,7 @@
                 <Setter Property="StrokeShape" Value="RoundRectangle 5" />
                 <Setter Property="Margin" Value="0, 0, 0, 5" />
                 <Setter Property="Padding" Value="0, 0, 15, 0" />
-                <Setter Property="BackgroundColor" Value="{StaticResource colorElementBackgound}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightElementBackgound}, Dark={StaticResource darkElementBackgound}}" />
 
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
@@ -102,13 +113,13 @@
 
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource colorElementBackgound}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightElementBackgound}, Dark={StaticResource darkElementBackgound}}" />
                                 </VisualState.Setters>
                             </VisualState>
 
                             <VisualState x:Name="PointerOver">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource colorElementPointerOver}" />
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightElementPointerOver}, Dark={StaticResource darkElementPointerOver}}" />
                                 </VisualState.Setters>
                             </VisualState>
 
@@ -135,11 +146,11 @@
 
             <!-- Element - Button -->
             <Style x:Key="elementButton" TargetType="Border">
-                <Setter Property="HeightRequest" Value="40" />
-                <Setter Property="StrokeThickness" Value="0" />
+                <Setter Property="HeightRequest" Value="35" />
+                <Setter Property="StrokeThickness" Value="0.3" />
                 <Setter Property="StrokeShape" Value="RoundRectangle 5" />
                 <Setter Property="Margin" Value="5, 0" />
-                <Setter Property="BackgroundColor" Value="{StaticResource colorNavSelected}" />
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
 
                 <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
@@ -147,19 +158,19 @@
 
                         <VisualState x:Name="Normal">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{StaticResource colorNavSelected}" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
                             </VisualState.Setters>
                         </VisualState>
 
                         <VisualState x:Name="Disabled">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="Grey" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundDisabled}, Dark={StaticResource darkButtonBackgoundDisabled}}" />
                             </VisualState.Setters>
                         </VisualState>
 
                         <VisualState x:Name="PointerOver">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{StaticResource colorNavSelectedDark}" />
+                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundPointerOver}, Dark={StaticResource darkButtonBackgoundPointerOver}}" />
                             </VisualState.Setters>
                         </VisualState>
 
@@ -173,7 +184,6 @@
                 <Setter Property="FontFamily" Value="SegoeUI" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
                 <Setter Property="Margin" Value="10, 0" />
-                <Setter Property="TextColor" Value="{StaticResource colorElementBackgound}" />
             </Style>
 
         </ResourceDictionary>
