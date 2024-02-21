@@ -2,7 +2,9 @@
 <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Tweaker11"
-             x:Class="Tweaker11.App">
+             x:Class="Tweaker11.App"
+             
+             xmlns:mtc="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
     <Application.Resources>
         <ResourceDictionary>
             
@@ -28,6 +30,13 @@
             <Color x:Key="darkButtonBackgound">#373737</Color>
             <Color x:Key="darkButtonBackgoundDisabled">#343434</Color>
             <Color x:Key="darkButtonBackgoundPointerOver">#434343</Color>
+
+            <!-- Main grid -->
+            <Style x:Key="mainGrid" TargetType="Grid">
+                <Setter Property="RowDefinitions" Value="*, Auto" />
+                <Setter Property="ColumnDefinitions" Value="280, *" />
+                <Setter Property="Margin" Value="10, 10, 10, 0" />
+            </Style>
 
             <!-- Title -->
             <Style x:Key="title" TargetType="Label">
@@ -144,46 +153,73 @@
                 <Setter Property="Margin" Value="15, 0, 0, 0" />
             </Style>
 
-            <!-- Element - Button -->
-            <Style x:Key="elementButton" TargetType="Border">
+            <!-- Basic button -->
+            <Style x:Key="basicButton" TargetType="Border">
+                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
+
+                <Setter Property="VisualStateManager.VisualStateGroups">
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CustomStates">
+
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundDisabled}, Dark={StaticResource darkButtonBackgoundDisabled}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                            <VisualState x:Name="PointerOver">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundPointerOver}, Dark={StaticResource darkButtonBackgoundPointerOver}}" />
+                                </VisualState.Setters>
+                            </VisualState>
+
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </Setter>
+            </Style>
+            
+            <!-- Basic button text -->
+            <Style x:Key="basicButtonText" TargetType="Label">
+                <Setter Property="FontFamily" Value="SegoeUI" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+
+            <!-- Action button -->
+            <Style x:Key="actionButton" TargetType="Border" BasedOn="{StaticResource basicButton}">
                 <Setter Property="HeightRequest" Value="35" />
                 <Setter Property="StrokeThickness" Value="0.3" />
                 <Setter Property="StrokeShape" Value="RoundRectangle 5" />
                 <Setter Property="Margin" Value="5, 0" />
-                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
-
-                <Setter Property="VisualStateManager.VisualStateGroups">
-                <VisualStateGroupList>
-                    <VisualStateGroup x:Name="CustomStates">
-
-                        <VisualState x:Name="Normal">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgound}, Dark={StaticResource darkButtonBackgound}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-
-                        <VisualState x:Name="Disabled">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundDisabled}, Dark={StaticResource darkButtonBackgoundDisabled}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-
-                        <VisualState x:Name="PointerOver">
-                            <VisualState.Setters>
-                                <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightButtonBackgoundPointerOver}, Dark={StaticResource darkButtonBackgoundPointerOver}}" />
-                            </VisualState.Setters>
-                        </VisualState>
-
-                    </VisualStateGroup>
-                </VisualStateGroupList>
-                </Setter>
             </Style>
 
-            <!-- Element - Button -->
-            <Style x:Key="elementButtonText" TargetType="Label">
-                <Setter Property="FontFamily" Value="SegoeUI" />
-                <Setter Property="VerticalTextAlignment" Value="Center" />
+            <!-- Action button text -->
+            <Style x:Key="actionButtonText" TargetType="Label" BasedOn="{StaticResource basicButtonText}">
                 <Setter Property="Margin" Value="10, 0" />
+            </Style>
+
+            <!-- Expander element -->
+            <Style x:Key="expanderElement" TargetType="Border" BasedOn="{StaticResource basicButton}">
+                <Setter Property="HeightRequest" Value="35" />
+                <Setter Property="StrokeThickness" Value="0" />
+            </Style>
+
+            <!-- Expander text -->
+            <Style x:Key="expanderElementText" TargetType="Label" BasedOn="{StaticResource basicButtonText}">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <!-- Languages container -->
+            <Style x:Key="languagesContainer" TargetType="Border" BasedOn="{StaticResource basicButton}">
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="StrokeThickness" Value="0.3" />
+                <Setter Property="StrokeShape" Value="RoundRectangle 5" />
+                <Setter Property="Margin" Value="0, 10" />
             </Style>
 
         </ResourceDictionary>

@@ -35,7 +35,7 @@
                         Grid.Column="1">
 
                         <Border
-                            Style="{StaticResource elementButton}"
+                            Style="{StaticResource actionButton}"
                             IsVisible="{TemplateBinding RestoreVisible}"
                             IsEnabled="{TemplateBinding RestoreActive}">
 
@@ -45,12 +45,12 @@
                             
                             <Label 
                                 Text="Restore"
-                                Style="{StaticResource elementButtonText}"/>
+                                Style="{StaticResource actionButtonText}"/>
 
                         </Border>
 
                         <Border
-                            Style="{StaticResource elementButton}"
+                            Style="{StaticResource actionButton}"
                             IsVisible="{TemplateBinding DeleteVisible}"
                             IsEnabled="{TemplateBinding DeleteActive}">
 
@@ -60,12 +60,12 @@
 
                             <Label 
                                 Text="Delete"
-                                Style="{StaticResource elementButtonText}"/>
+                                Style="{StaticResource actionButtonText}"/>
 
                         </Border>
 
                         <Border
-                            Style="{StaticResource elementButton}"
+                            Style="{StaticResource actionButton}"
                             IsVisible="{TemplateBinding RemoveVisible}"
                             IsEnabled="{TemplateBinding RemoveActive}">
 
@@ -75,7 +75,7 @@
 
                             <Label 
                                 Text="Remove"
-                                Style="{StaticResource elementButtonText}"/>
+                                Style="{StaticResource actionButtonText}"/>
 
                         </Border>
 

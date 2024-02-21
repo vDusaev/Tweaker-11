@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tweaker11.Views.ApplicationsPage"
              
+             xmlns:extensions="clr-namespace:Tweaker11.Extensions"
              xmlns:controls="clr-namespace:Tweaker11.Controls"
              xmlns:models="clr-namespace:Tweaker11.Models"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
@@ -13,7 +14,7 @@
         IsVisible="{Binding IsVisible}">
 
         <Label 
-            Text="Applications"
+            Text="{extensions:Translate PageApplications}"
             Style="{StaticResource title}"/>
 
         <CollectionView

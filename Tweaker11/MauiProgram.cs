@@ -22,6 +22,8 @@ namespace Tweaker11
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
+            // Register settings service.
+            builder.Services.AddSingleton<SettingsService>();
 
             // Pages.
             builder.Services.AddSingleton<MainPage>();

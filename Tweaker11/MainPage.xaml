@@ -3,9 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tweaker11.MainPage"
              
+             xmlns:extensions="clr-namespace:Tweaker11.Extensions"
              xmlns:controls="clr-namespace:Tweaker11.Controls"
+             xmlns:models="clr-namespace:Tweaker11.Models"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
              xmlns:views="clr-namespace:Tweaker11.Views"
+             xmlns:mtc="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              
              x:DataType="viewModels:MainPageViewModel"
              
@@ -13,30 +16,93 @@
              
              BackgroundColor="{AppThemeBinding Light={StaticResource lightBackground}, Dark={StaticResource darkBackground}}">
 
-    <Grid
-        Margin="10, 10, 10, 0"
-        ColumnDefinitions="280, *">
+    <Grid 
+        Style="{StaticResource mainGrid}">
 
         <!-- Menu -->
         <VerticalStackLayout
+            Grid.RowSpan="0"
             Grid.Column="0">
 
             <controls:NavigationControl 
                 NamePage="HomePage"
                 Image="home.png"
-                Text="Home"
+                Text="{extensions:Translate PageHome}"
                 IsVisible="{Binding HomePageVisible}" />
 
             <controls:NavigationControl 
                 NamePage="ApplicationsPage"
                 Image="applications.png"
-                Text="Applications"
+                Text="{extensions:Translate PageApplications}"
                 IsVisible="{Binding ApplicationsPageVisible}" />
 
         </VerticalStackLayout>
 
+        <!-- Languages -->
+        <HorizontalStackLayout
+            Grid.Row="1"
+            Grid.Column="0"
+            HorizontalOptions="Center">
+
+            <Border
+                Style="{StaticResource languagesContainer}">
+            
+                <mtc:Expander
+                    Direction="Up"
+                    IsExpanded="{Binding IsOpenedLanguages}">
+                
+                    <mtc:Expander.Header>
+
+                        <Border
+                            Style="{StaticResource expanderElement}">
+
+                            <Label 
+                                Text="{extensions:Translate Language}"
+                                Style="{StaticResource expanderElementText}" />
+
+                        </Border>
+                    
+                    </mtc:Expander.Header>
+                
+                    <mtc:Expander.Content>
+                        <CollectionView
+                            ItemsSource="{Binding Languages}">
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate 
+                                    x:DataType="models:LanguageItem">
+                                
+                                    <Border
+                                        Style="{StaticResource expanderElement}">
+
+                                            <Border.GestureRecognizers>
+                                                <TapGestureRecognizer 
+                                                    Command="{Binding Path=LanguageClickCommand, Source={RelativeSource AncestorType={x:Type viewModels:MainPageViewModel}}}"
+                                                    CommandParameter="{Binding Name}">
+                                                </TapGestureRecognizer>
+                                            </Border.GestureRecognizers>
+
+                                        <Label 
+                                            Text="{Binding DisplayName}"
+                                            Style="{StaticResource expanderElementText}" />
+
+                                    </Border>
+                                
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+                    
+                
+                    </mtc:Expander.Content>
+            
+                </mtc:Expander>
+
+            </Border>
+
+        </HorizontalStackLayout>
+        
         <!-- Content -->
         <VerticalStackLayout
+            Grid.RowSpan="2"
             Grid.Column="1"
             Margin="20, 0, 20, 0">
 

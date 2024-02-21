@@ -166,7 +166,7 @@ public partial class ApplicationsViewModel : BaseViewModel
         {
             Name = "StickyNotes",
             Image = "sticky_notes.png",
-            Text = "Записки",
+            Text = "Sticky notes",
             AppxName = "Microsoft.MicrosoftStickyNotes"
         });
 
@@ -174,7 +174,7 @@ public partial class ApplicationsViewModel : BaseViewModel
         {
             Name = "Alarms",
             Image = "alarms.png",
-            Text = "Часы",
+            Text = "Alarms",
             AppxName = "Microsoft.WindowsAlarms"
         });
     }

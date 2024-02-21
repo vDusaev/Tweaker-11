@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Tweaker11.Views.HomePage"
              
+             xmlns:extensions="clr-namespace:Tweaker11.Extensions"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
              
              x:DataType="viewModels:HomeViewModel">
@@ -11,7 +12,7 @@
         IsVisible="{Binding IsVisible}">
         
         <Label 
-            Text="Home"
+            Text="{extensions:Translate PageHome}"
             Style="{StaticResource title}"/>
         
     </VerticalStackLayout>
