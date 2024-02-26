@@ -4,10 +4,12 @@ public partial class ApplicationItem : ObservableObject
 {
     public string Name { get; set; }
     public string? Image { get; set; }
-    public string? Text { get; set; }
     public string? AppxName { get; set; }
     public string? AppxInstallPackage { get; set; }
     public string? AppxFilePackage { get; set; }
+    
+    [ObservableProperty]
+    private string? _text;
     [ObservableProperty]
     private bool _restoreActive;
     [ObservableProperty]

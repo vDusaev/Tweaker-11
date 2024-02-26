@@ -3,7 +3,7 @@
     "Windows Machine": {
       "commandName": "MsixPackage",
       "nativeDebugging": false,
-      "remoteDebugEnabled": false,
+      "remoteDebugEnabled": true,
       "remoteDebugMachine": "DESKTOP-V3OTERK",
       "authenticationMode": "Windows"
     }

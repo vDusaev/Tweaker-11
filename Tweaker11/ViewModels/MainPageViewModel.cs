@@ -24,19 +24,18 @@ public partial class MainPageViewModel : ObservableObject
     {
         _settingsService = settingsService;
         
-        // Initialize languages.
-        InitializeLanguages();
-
         // Home page.
         _homeViewModel = homeViewModel;
-        _homeViewModel.IsVisible = true;
-        
-        HomePageVisible = true;
         
         // Applications page.
         _applicationsViewModel = applicationsViewModel;
-        _applicationsViewModel.SetApplicationsService(new ApplicationsService());
-        _applicationsViewModel.Initialize();
+
+        // Initialize languages.
+        InitializeLanguages();
+
+        // Start page.
+        _homeViewModel.IsVisible = true;
+        HomePageVisible = true;
     }
 
     [RelayCommand]
@@ -84,5 +83,7 @@ public partial class MainPageViewModel : ObservableObject
 
         Translator.Instance.CultureInfo = new CultureInfo(selectedLanguage);
         Translator.Instance.OnPropertyChanged();
+
+        await ApplicationsViewModel.ChangeLanguage();
     }
 }

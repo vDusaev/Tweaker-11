@@ -6,15 +6,11 @@ public partial class ApplicationsViewModel : BaseViewModel
 
     public ObservableCollection<ApplicationItem> Applications { get; set; } = new();
 
-    public void SetApplicationsService(ApplicationsService applicationsService)
-    { 
-        _applicationsService = applicationsService;
-    }
-
-    public async void Initialize()
+    public ApplicationsViewModel()
     {
-        await InitializeApplications();
-        await UpdateApplications();
+        _applicationsService = new ApplicationsService();
+
+        Initialize();
     }
 
     public async Task RestoreTapped(object sender, EventArgs e)
@@ -95,6 +91,54 @@ public partial class ApplicationsViewModel : BaseViewModel
         await UpdateApplication(application);
     }
 
+    public async Task ChangeLanguage()
+    {
+        foreach (var application in Applications)
+        {
+            application.Text = Translator.Instance[application.Name];
+        }
+    }
+
+    private async Task Initialize()
+    {
+        Applications = new()
+        {
+            new ApplicationItem()
+            {
+                Name = "Paint",
+                Image = "paint.png",
+                AppxName = "Microsoft.Paint"
+            },
+            new ApplicationItem()
+            {
+                Name = "Solitaire",
+                Image = "solitaire.png",
+                AppxName = "Microsoft.MicrosoftSolitaireCollection"
+            },
+            new ApplicationItem()
+            {
+                Name = "StickyNotes",
+                Image = "sticky_notes.png",
+                AppxName = "Microsoft.MicrosoftStickyNotes"
+            },
+            new ApplicationItem()
+            {
+                Name = "Alarms",
+                Image = "alarms.png",
+                AppxName = "Microsoft.WindowsAlarms"
+            },
+            new ApplicationItem()
+            {
+                Name = "YourPhone",
+                Image = "your_phone.png",
+                AppxName = "Microsoft.YourPhone"
+            }
+            
+        };
+
+        await UpdateApplications();
+    }
+
     private async Task UpdateApplication(ApplicationItem application)
     {
         var installAppxPackage = await _applicationsService.GetInstallAppxPackage(application.AppxName);
@@ -142,40 +186,5 @@ public partial class ApplicationsViewModel : BaseViewModel
                 application.RestoreActive = true;
             }
         }
-    }
-
-    private async Task InitializeApplications()
-    {
-        Applications.Add(new ApplicationItem()
-        {
-            Name = "Paint",
-            Image = "paint.png",
-            Text = "Paint",
-            AppxName = "Microsoft.Paint"
-        });
-
-        Applications.Add(new ApplicationItem()
-        {
-            Name = "Solitaire",
-            Image = "solitaire.png",
-            Text = "Solitaire & Casual Games",
-            AppxName = "Microsoft.MicrosoftSolitaireCollection"
-        });
-
-        Applications.Add(new ApplicationItem()
-        {
-            Name = "StickyNotes",
-            Image = "sticky_notes.png",
-            Text = "Sticky notes",
-            AppxName = "Microsoft.MicrosoftStickyNotes"
-        });
-
-        Applications.Add(new ApplicationItem()
-        {
-            Name = "Alarms",
-            Image = "alarms.png",
-            Text = "Alarms",
-            AppxName = "Microsoft.WindowsAlarms"
-        });
     }
 }

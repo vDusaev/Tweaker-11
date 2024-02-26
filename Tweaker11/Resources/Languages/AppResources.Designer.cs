@@ -61,6 +61,15 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Clock.
+        /// </summary>
+        internal static string Alarms {
+            get {
+                return ResourceManager.GetString("Alarms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на English.
         /// </summary>
         internal static string Language {
@@ -84,6 +93,42 @@ namespace Tweaker11.Resources.Languages {
         internal static string PageHome {
             get {
                 return ResourceManager.GetString("PageHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Paint.
+        /// </summary>
+        internal static string Paint {
+            get {
+                return ResourceManager.GetString("Paint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Solitaire &amp; Casual Games.
+        /// </summary>
+        internal static string Solitaire {
+            get {
+                return ResourceManager.GetString("Solitaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sticky Notes.
+        /// </summary>
+        internal static string StickyNotes {
+            get {
+                return ResourceManager.GetString("StickyNotes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your phone.
+        /// </summary>
+        internal static string YourPhone {
+            get {
+                return ResourceManager.GetString("YourPhone", resourceCulture);
             }
         }
     }
