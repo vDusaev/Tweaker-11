@@ -2,6 +2,8 @@
 
 public partial class MainPageViewModel : ObservableObject
 {
+    private string _currentPage;
+
     private SettingsService _settingsService;
 
     [ObservableProperty]
@@ -15,6 +17,8 @@ public partial class MainPageViewModel : ObservableObject
     private ApplicationsViewModel _applicationsViewModel;
 
     [ObservableProperty]
+    private string _title;
+    [ObservableProperty]
     private bool _isOpenedLanguages;
 
     public ObservableCollection<LanguageItem> Languages { get; set; } = new();
@@ -22,6 +26,7 @@ public partial class MainPageViewModel : ObservableObject
     public MainPageViewModel(HomeViewModel homeViewModel, ApplicationsViewModel applicationsViewModel,
         SettingsService settingsService)
     {
+        _currentPage = "HomePage";
         _settingsService = settingsService;
         
         // Home page.
@@ -34,8 +39,7 @@ public partial class MainPageViewModel : ObservableObject
         InitializeLanguages();
 
         // Start page.
-        _homeViewModel.IsVisible = true;
-        HomePageVisible = true;
+        ChangePage(_currentPage);
     }
 
     [RelayCommand]
@@ -65,6 +69,10 @@ public partial class MainPageViewModel : ObservableObject
 
     private async Task ChangePage(string currentPage)
     {
+        _currentPage = currentPage;
+
+        Title = Translator.Instance[_currentPage];
+
         HomePageVisible = currentPage == "HomePage";
         ApplicationsPageVisible = currentPage == "ApplicationsPage";
 
@@ -83,6 +91,8 @@ public partial class MainPageViewModel : ObservableObject
 
         Translator.Instance.CultureInfo = new CultureInfo(selectedLanguage);
         Translator.Instance.OnPropertyChanged();
+
+        Title = Translator.Instance[_currentPage];
 
         await ApplicationsViewModel.ChangeLanguage();
     }

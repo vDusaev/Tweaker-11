@@ -21,26 +21,26 @@
 
         <!-- Menu -->
         <VerticalStackLayout
-            Grid.RowSpan="0"
+            Grid.RowSpan="2"
             Grid.Column="0">
 
             <controls:NavigationControl 
                 NamePage="HomePage"
                 Image="home.png"
-                Text="{extensions:Translate PageHome}"
+                Text="{extensions:Translate HomePage}"
                 IsVisible="{Binding HomePageVisible}" />
 
             <controls:NavigationControl 
                 NamePage="ApplicationsPage"
                 Image="applications.png"
-                Text="{extensions:Translate PageApplications}"
+                Text="{extensions:Translate ApplicationsPage}"
                 IsVisible="{Binding ApplicationsPageVisible}" />
 
         </VerticalStackLayout>
 
         <!-- Languages -->
         <HorizontalStackLayout
-            Grid.Row="1"
+            Grid.Row="2"
             Grid.Column="0"
             HorizontalOptions="Center">
 
@@ -90,7 +90,6 @@
                                 </DataTemplate>
                             </CollectionView.ItemTemplate>
                         </CollectionView>
-                    
                 
                     </mtc:Expander.Content>
             
@@ -100,19 +99,31 @@
 
         </HorizontalStackLayout>
         
+        <!-- Title -->
+        <Label 
+            Grid.Row="0"
+            Grid.Column="1"
+            Text="{Binding Title}"
+            Style="{StaticResource title}"/>
+
         <!-- Content -->
-        <VerticalStackLayout
+        <ScrollView
+            Grid.Row="1"
             Grid.RowSpan="2"
             Grid.Column="1"
-            Margin="20, 0, 20, 0">
-
-            <views:HomePage
-                BindingContext="{Binding HomeViewModel}" />
+            Margin="20, 0, 0, 0">
             
-            <views:ApplicationsPage 
-                BindingContext="{Binding ApplicationsViewModel}" />
+            <VerticalStackLayout>
 
-        </VerticalStackLayout>
+                <views:HomePage
+                    BindingContext="{Binding HomeViewModel}" />
+
+                <views:ApplicationsPage 
+                    BindingContext="{Binding ApplicationsViewModel}" />
+
+            </VerticalStackLayout>
+            
+        </ScrollView>
 
     </Grid>
     

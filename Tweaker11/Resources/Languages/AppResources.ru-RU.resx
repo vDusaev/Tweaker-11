@@ -120,20 +120,26 @@
   <data name="Alarms" xml:space="preserve">
     <value>Будильники и часы</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>Русский</value>
-  </data>
-  <data name="PageApplications" xml:space="preserve">
+  <data name="ApplicationsPage" xml:space="preserve">
     <value>Приложения</value>
   </data>
-  <data name="PageHome" xml:space="preserve">
+  <data name="BingWeather" xml:space="preserve">
+    <value>Погода</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
     <value>Главная</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Русский</value>
   </data>
   <data name="Paint" xml:space="preserve">
     <value>Paint</value>
   </data>
   <data name="Solitaire" xml:space="preserve">
     <value>Solitaire Collection</value>
+  </data>
+  <data name="SoundRecorder" xml:space="preserve">
+    <value />
   </data>
   <data name="StickyNotes" xml:space="preserve">
     <value>Записки</value>

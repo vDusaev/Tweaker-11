@@ -13,10 +13,6 @@
     <VerticalStackLayout
         IsVisible="{Binding IsVisible}">
 
-        <Label 
-            Text="{extensions:Translate PageApplications}"
-            Style="{StaticResource title}"/>
-
         <CollectionView
             ItemsSource="{Binding Applications}">
 
@@ -37,7 +33,7 @@
                         EventRestore="RestoreTapped"
                         EventRemove="RemoveTapped"
                         EventDelete="DeleteTapped" />
-                    
+
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 

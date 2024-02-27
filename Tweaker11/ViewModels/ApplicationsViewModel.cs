@@ -132,8 +132,25 @@ public partial class ApplicationsViewModel : BaseViewModel
                 Name = "YourPhone",
                 Image = "your_phone.png",
                 AppxName = "Microsoft.YourPhone"
+            },
+            new ApplicationItem()
+            {
+                Name = "BingWeather",
+                Image = "weather.png",
+                AppxName = "Microsoft.BingWeather"
+            },
+            new ApplicationItem()
+            {
+                Name = "SoundRecorder",
+                Image = "sound_recorder.png",
+                AppxName = "Microsoft.WindowsSoundRecorder"
+            },
+            new ApplicationItem()
+            {
+                Name = "Outlook",
+                Image = "outlook.png",
+                AppxName = "Microsoft.OutlookForWindows"
             }
-            
         };
 
         await UpdateApplications();

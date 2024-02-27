@@ -120,20 +120,26 @@
   <data name="Alarms" xml:space="preserve">
     <value>Clock</value>
   </data>
-  <data name="Language" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="PageApplications" xml:space="preserve">
+  <data name="ApplicationsPage" xml:space="preserve">
     <value>Applications</value>
   </data>
-  <data name="PageHome" xml:space="preserve">
+  <data name="BingWeather" xml:space="preserve">
+    <value>Weather</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>English</value>
   </data>
   <data name="Paint" xml:space="preserve">
     <value>Paint</value>
   </data>
   <data name="Solitaire" xml:space="preserve">
     <value>Solitaire &amp; Casual Games</value>
+  </data>
+  <data name="SoundRecorder" xml:space="preserve">
+    <value>Sound recorder</value>
   </data>
   <data name="StickyNotes" xml:space="preserve">
     <value>Sticky Notes</value>

@@ -70,29 +70,38 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на English.
+        ///   Ищет локализованную строку, похожую на Applications.
         /// </summary>
-        internal static string Language {
+        internal static string ApplicationsPage {
             get {
-                return ResourceManager.GetString("Language", resourceCulture);
+                return ResourceManager.GetString("ApplicationsPage", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Applications.
+        ///   Ищет локализованную строку, похожую на Weather.
         /// </summary>
-        internal static string PageApplications {
+        internal static string BingWeather {
             get {
-                return ResourceManager.GetString("PageApplications", resourceCulture);
+                return ResourceManager.GetString("BingWeather", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на Home.
         /// </summary>
-        internal static string PageHome {
+        internal static string HomePage {
             get {
-                return ResourceManager.GetString("PageHome", resourceCulture);
+                return ResourceManager.GetString("HomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на English.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
             }
         }
         
@@ -111,6 +120,15 @@ namespace Tweaker11.Resources.Languages {
         internal static string Solitaire {
             get {
                 return ResourceManager.GetString("Solitaire", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sound recorder.
+        /// </summary>
+        internal static string SoundRecorder {
+            get {
+                return ResourceManager.GetString("SoundRecorder", resourceCulture);
             }
         }
         

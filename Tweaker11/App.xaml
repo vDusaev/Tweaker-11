@@ -33,7 +33,7 @@
 
             <!-- Main grid -->
             <Style x:Key="mainGrid" TargetType="Grid">
-                <Setter Property="RowDefinitions" Value="*, Auto" />
+                <Setter Property="RowDefinitions" Value="Auto, *, Auto" />
                 <Setter Property="ColumnDefinitions" Value="280, *" />
                 <Setter Property="Margin" Value="10, 10, 10, 0" />
             </Style>
@@ -44,7 +44,7 @@
                 <Setter Property="FontSize" Value="28" />
                 <Setter Property="MinimumWidthRequest" Value="500" />
                 <Setter Property="MaximumWidthRequest" Value="1000" />
-                <Setter Property="Margin" Value="0, 0, 0, 30" />
+                <Setter Property="Margin" Value="20, 0, 20, 30" />
             </Style>
 
             <!-- Navigation - Border -->
@@ -112,7 +112,7 @@
                 <Setter Property="MaximumWidthRequest" Value="1000" />
                 <Setter Property="StrokeThickness" Value="0" />
                 <Setter Property="StrokeShape" Value="RoundRectangle 5" />
-                <Setter Property="Margin" Value="0, 0, 0, 5" />
+                <Setter Property="Margin" Value="0, 0, 20, 5" />
                 <Setter Property="Padding" Value="0, 0, 15, 0" />
                 <Setter Property="BackgroundColor" Value="{AppThemeBinding Light={StaticResource lightElementBackgound}, Dark={StaticResource darkElementBackgound}}" />
 

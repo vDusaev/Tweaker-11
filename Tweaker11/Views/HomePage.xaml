@@ -10,11 +10,7 @@
 
     <VerticalStackLayout
         IsVisible="{Binding IsVisible}">
-        
-        <Label 
-            Text="{extensions:Translate PageHome}"
-            Style="{StaticResource title}"/>
-        
+
     </VerticalStackLayout>
 
 </ContentView>
