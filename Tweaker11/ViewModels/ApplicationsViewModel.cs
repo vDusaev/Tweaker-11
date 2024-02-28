@@ -105,9 +105,93 @@ public partial class ApplicationsViewModel : BaseViewModel
         {
             new ApplicationItem()
             {
+                Name = "Camera",
+                Image = "camera.png",
+                AppxName = "Microsoft.WindowsCamera"
+            },
+            new ApplicationItem()
+            {
+                Name = "Clipchamp",
+                Image = "clipchamp.png",
+                AppxName = "Clipchamp.Clipchamp"
+            },
+            new ApplicationItem()
+            {
+                Name = "Alarms",
+                Image = "alarms.png",
+                AppxName = "Microsoft.WindowsAlarms"
+            },
+            new ApplicationItem()
+            {
+                Name = "FeedbackHub",
+                Image = "feedback_hub.png",
+                AppxName = "Microsoft.WindowsFeedbackHub"
+            },
+            new ApplicationItem()
+            {
+                Name = "GetHelp",
+                Image = "get_help.png",
+                AppxName = "Microsoft.GetHelp"
+            },
+            new ApplicationItem()
+            {
+                Name = "MailAndCalendar",
+                Image = "mail_calendar.png",
+                AppxName = "Microsoft.windowscommunicationsapps"
+            },
+            new ApplicationItem()
+            {
+                Name = "Maps",
+                Image = "maps.png",
+                AppxName = "Microsoft.WindowsMaps"
+            },
+            new ApplicationItem()
+            {
+                Name = "ZuneMusic",
+                Image = "zune_music.png",
+                AppxName = "Microsoft.ZuneMusic"
+            },
+            new ApplicationItem()
+            {
+                Name = "News",
+                Image = "news.png",
+                AppxName = "Microsoft.BingNews"
+            },
+            new ApplicationItem()
+            {
+                Name = "Todo",
+                Image = "todo.png",
+                AppxName = "Microsoft.Todos"
+            },
+            new ApplicationItem()
+            {
+                Name = "ZuneVideo",
+                Image = "zune_video.png",
+                AppxName = "Microsoft.ZuneVideo"
+            },
+            new ApplicationItem()
+            {
+                Name = "Office",
+                Image = "office.png",
+                AppxName = "Microsoft.MicrosoftOfficeHub"
+            },
+            new ApplicationItem()
+            {
+                Name = "Outlook",
+                Image = "outlook.png",
+                AppxName = "Microsoft.OutlookForWindows"
+            },
+            new ApplicationItem()
+            {
                 Name = "Paint",
                 Image = "paint.png",
                 AppxName = "Microsoft.Paint"
+            },
+            new ApplicationItem()
+            {
+                Name = "QuickAssist",
+                Image = "quick_assist.png",
+                AppxName = "MicrosoftCorporationII.QuickAssist"
             },
             new ApplicationItem()
             {
@@ -123,21 +207,9 @@ public partial class ApplicationsViewModel : BaseViewModel
             },
             new ApplicationItem()
             {
-                Name = "Alarms",
-                Image = "alarms.png",
-                AppxName = "Microsoft.WindowsAlarms"
-            },
-            new ApplicationItem()
-            {
-                Name = "YourPhone",
-                Image = "your_phone.png",
-                AppxName = "Microsoft.YourPhone"
-            },
-            new ApplicationItem()
-            {
-                Name = "BingWeather",
-                Image = "weather.png",
-                AppxName = "Microsoft.BingWeather"
+                Name = "GetStarted",
+                Image = "get_started.png",
+                AppxName = "Microsoft.Getstarted"
             },
             new ApplicationItem()
             {
@@ -147,10 +219,16 @@ public partial class ApplicationsViewModel : BaseViewModel
             },
             new ApplicationItem()
             {
-                Name = "Outlook",
-                Image = "outlook.png",
-                AppxName = "Microsoft.OutlookForWindows"
-            }
+                Name = "BingWeather",
+                Image = "weather.png",
+                AppxName = "Microsoft.BingWeather"
+            },
+            new ApplicationItem()
+            {
+                Name = "YourPhone",
+                Image = "your_phone.png",
+                AppxName = "Microsoft.YourPhone"
+            },
         };
 
         await UpdateApplications();

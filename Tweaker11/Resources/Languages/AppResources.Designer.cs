@@ -88,6 +88,51 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Camera.
+        /// </summary>
+        internal static string Camera {
+            get {
+                return ResourceManager.GetString("Camera", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Clipchamp - Video editor.
+        /// </summary>
+        internal static string Clipchamp {
+            get {
+                return ResourceManager.GetString("Clipchamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Feedback hub.
+        /// </summary>
+        internal static string FeedbackHub {
+            get {
+                return ResourceManager.GetString("FeedbackHub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Get help.
+        /// </summary>
+        internal static string GetHelp {
+            get {
+                return ResourceManager.GetString("GetHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tips.
+        /// </summary>
+        internal static string GetStarted {
+            get {
+                return ResourceManager.GetString("GetStarted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Home.
         /// </summary>
         internal static string HomePage {
@@ -106,11 +151,65 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Mail and calendar.
+        /// </summary>
+        internal static string MailAndCalendar {
+            get {
+                return ResourceManager.GetString("MailAndCalendar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Maps.
+        /// </summary>
+        internal static string Maps {
+            get {
+                return ResourceManager.GetString("Maps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Microsoft News.
+        /// </summary>
+        internal static string News {
+            get {
+                return ResourceManager.GetString("News", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Office.
+        /// </summary>
+        internal static string Office {
+            get {
+                return ResourceManager.GetString("Office", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Outlook.
+        /// </summary>
+        internal static string Outlook {
+            get {
+                return ResourceManager.GetString("Outlook", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Paint.
         /// </summary>
         internal static string Paint {
             get {
                 return ResourceManager.GetString("Paint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Quick assist.
+        /// </summary>
+        internal static string QuickAssist {
+            get {
+                return ResourceManager.GetString("QuickAssist", resourceCulture);
             }
         }
         
@@ -142,11 +241,38 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Microsoft To Do.
+        /// </summary>
+        internal static string Todo {
+            get {
+                return ResourceManager.GetString("Todo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Your phone.
         /// </summary>
         internal static string YourPhone {
             get {
                 return ResourceManager.GetString("YourPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Media player.
+        /// </summary>
+        internal static string ZuneMusic {
+            get {
+                return ResourceManager.GetString("ZuneMusic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Movies &amp; TV.
+        /// </summary>
+        internal static string ZuneVideo {
+            get {
+                return ResourceManager.GetString("ZuneVideo", resourceCulture);
             }
         }
     }

@@ -126,25 +126,67 @@
   <data name="BingWeather" xml:space="preserve">
     <value>Погода</value>
   </data>
+  <data name="Camera" xml:space="preserve">
+    <value>Камера</value>
+  </data>
+  <data name="Clipchamp" xml:space="preserve">
+    <value>Clipchamp - редактор видео</value>
+  </data>
+  <data name="FeedbackHub" xml:space="preserve">
+    <value>Центр отзывов</value>
+  </data>
+  <data name="GetHelp" xml:space="preserve">
+    <value>Техническая поддержка</value>
+  </data>
+  <data name="GetStarted" xml:space="preserve">
+    <value>Советы</value>
+  </data>
   <data name="HomePage" xml:space="preserve">
     <value>Главная</value>
   </data>
   <data name="Language" xml:space="preserve">
     <value>Русский</value>
   </data>
+  <data name="MailAndCalendar" xml:space="preserve">
+    <value>Почта и Календарь</value>
+  </data>
+  <data name="Maps" xml:space="preserve">
+    <value>Карты</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>Mictosoft Новости</value>
+  </data>
+  <data name="Office" xml:space="preserve">
+    <value>Office</value>
+  </data>
+  <data name="Outlook" xml:space="preserve">
+    <value>Outlook</value>
+  </data>
   <data name="Paint" xml:space="preserve">
     <value>Paint</value>
+  </data>
+  <data name="QuickAssist" xml:space="preserve">
+    <value>Быстрая поддержка</value>
   </data>
   <data name="Solitaire" xml:space="preserve">
     <value>Solitaire Collection</value>
   </data>
   <data name="SoundRecorder" xml:space="preserve">
-    <value />
+    <value>Запись голоса</value>
   </data>
   <data name="StickyNotes" xml:space="preserve">
     <value>Записки</value>
   </data>
+  <data name="Todo" xml:space="preserve">
+    <value>Microsoft To Do</value>
+  </data>
   <data name="YourPhone" xml:space="preserve">
     <value>Ваш телефон</value>
+  </data>
+  <data name="ZuneMusic" xml:space="preserve">
+    <value>Медиаплеер</value>
+  </data>
+  <data name="ZuneVideo" xml:space="preserve">
+    <value>Кино и ТВ</value>
   </data>
 </root>
