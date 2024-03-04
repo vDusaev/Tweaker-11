@@ -9,10 +9,14 @@ public partial class MainPageViewModel : ObservableObject
     [ObservableProperty]
     private bool _homePageVisible;
     [ObservableProperty]
+    private bool _systemPageVisible;
+    [ObservableProperty]
     private bool _applicationsPageVisible;
 
     [ObservableProperty]
     private HomeViewModel _homeViewModel;
+    [ObservableProperty]
+    private SystemViewModel _systemViewModel;
     [ObservableProperty]
     private ApplicationsViewModel _applicationsViewModel;
 
@@ -23,15 +27,18 @@ public partial class MainPageViewModel : ObservableObject
 
     public ObservableCollection<LanguageItem> Languages { get; set; } = new();
 
-    public MainPageViewModel(HomeViewModel homeViewModel, ApplicationsViewModel applicationsViewModel,
-        SettingsService settingsService)
+    public MainPageViewModel(HomeViewModel homeViewModel, SystemViewModel systemViewModel, 
+        ApplicationsViewModel applicationsViewModel, SettingsService settingsService)
     {
         _currentPage = "HomePage";
         _settingsService = settingsService;
         
         // Home page.
         _homeViewModel = homeViewModel;
-        
+
+        // System page.
+        _systemViewModel = systemViewModel;
+
         // Applications page.
         _applicationsViewModel = applicationsViewModel;
 
@@ -74,9 +81,11 @@ public partial class MainPageViewModel : ObservableObject
         Title = Translator.Instance[_currentPage];
 
         HomePageVisible = currentPage == "HomePage";
+        SystemPageVisible = currentPage == "SystemPage";
         ApplicationsPageVisible = currentPage == "ApplicationsPage";
 
         HomeViewModel.IsVisible = HomePageVisible;
+        SystemViewModel.IsVisible = SystemPageVisible;
         ApplicationsViewModel.IsVisible = ApplicationsPageVisible;
     }
 

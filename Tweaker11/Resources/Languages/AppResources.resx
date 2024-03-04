@@ -177,6 +177,9 @@
   <data name="StickyNotes" xml:space="preserve">
     <value>Sticky Notes</value>
   </data>
+  <data name="SystemPage" xml:space="preserve">
+    <value>System</value>
+  </data>
   <data name="Todo" xml:space="preserve">
     <value>Microsoft To Do</value>
   </data>

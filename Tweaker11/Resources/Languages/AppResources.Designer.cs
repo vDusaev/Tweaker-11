@@ -241,6 +241,15 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на System.
+        /// </summary>
+        internal static string SystemPage {
+            get {
+                return ResourceManager.GetString("SystemPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Microsoft To Do.
         /// </summary>
         internal static string Todo {

@@ -31,6 +31,12 @@
                 IsVisible="{Binding HomePageVisible}" />
 
             <controls:NavigationControl 
+                NamePage="SystemPage"
+                Image="system.png"
+                Text="{extensions:Translate SystemPage}"
+                IsVisible="{Binding SystemPageVisible}" />
+
+            <controls:NavigationControl 
                 NamePage="ApplicationsPage"
                 Image="applications.png"
                 Text="{extensions:Translate ApplicationsPage}"
@@ -117,6 +123,9 @@
 
                 <views:HomePage
                     BindingContext="{Binding HomeViewModel}" />
+
+                <views:SystemPage
+                    BindingContext="{Binding SystemPageVisible}" />
 
                 <views:ApplicationsPage 
                     BindingContext="{Binding ApplicationsViewModel}" />

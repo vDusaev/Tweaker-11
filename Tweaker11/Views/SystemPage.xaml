@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tweaker11.Views.SystemPage"
+             
+             xmlns:extensions="clr-namespace:Tweaker11.Extensions"
+             xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
+             
+             x:DataType="viewModels:SystemViewModel">
+
+    <VerticalStackLayout
+        IsVisible="{Binding IsVisible}">
+
+    </VerticalStackLayout>
+
+</ContentView>

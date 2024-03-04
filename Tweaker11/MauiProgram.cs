@@ -31,6 +31,7 @@ namespace Tweaker11
             // View models.
             builder.Services.AddSingleton<MainPageViewModel>();
             builder.Services.AddSingleton<HomeViewModel>();
+            builder.Services.AddSingleton<SystemViewModel>();
             builder.Services.AddSingleton<ApplicationsViewModel>();
 
             return builder.Build();
