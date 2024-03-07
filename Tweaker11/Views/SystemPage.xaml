@@ -4,6 +4,7 @@
              x:Class="Tweaker11.Views.SystemPage"
              
              xmlns:extensions="clr-namespace:Tweaker11.Extensions"
+             xmlns:controls="clr-namespace:Tweaker11.Controls"
              xmlns:viewModels="clr-namespace:Tweaker11.ViewModels"
              
              x:DataType="viewModels:SystemViewModel">
@@ -11,6 +12,20 @@
     <VerticalStackLayout
         IsVisible="{Binding IsVisible}">
 
+        <controls:ElementControl 
+            Name="DisableSecurityNotifications"
+            Text="{extensions:Translate DisableSecurityNotifications}"
+
+            Button1Text="{extensions:Translate Activate}"
+            Button1Visible="True"
+            Button1Active="{Binding DisableSecurityNotificationsActivate}"
+            EventButton1="ActivateTapped"
+            
+            Button2Text="{extensions:Translate Restore}"
+            Button2Visible="True"
+            Button2Active="{Binding DisableSecurityNotificationsRestore}"
+            EventButton2="RestoreTapped" />
+        
     </VerticalStackLayout>
 
 </ContentView>

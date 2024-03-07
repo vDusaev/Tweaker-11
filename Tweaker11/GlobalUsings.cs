@@ -1,4 +1,6 @@
-﻿global using System.Collections.ObjectModel;
+﻿global using Microsoft.Win32;
+
+global using System.Collections.ObjectModel;
 global using System.Diagnostics;
 global using System.Text.RegularExpressions;
 global using System.Globalization;

@@ -36,45 +36,45 @@
 
                         <Border
                             Style="{StaticResource actionButton}"
-                            IsVisible="{TemplateBinding RestoreVisible}"
-                            IsEnabled="{TemplateBinding RestoreActive}">
+                            IsVisible="{TemplateBinding Button3Visible}"
+                            IsEnabled="{TemplateBinding Button3Active}">
 
                             <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="RestoreTapped" />
+                                <TapGestureRecognizer Tapped="Button3Tapped" />
                             </Border.GestureRecognizers>
-                            
+
                             <Label 
-                                Text="Restore"
+                                Text="{TemplateBinding Button3Text}"
                                 Style="{StaticResource actionButtonText}"/>
 
                         </Border>
 
                         <Border
                             Style="{StaticResource actionButton}"
-                            IsVisible="{TemplateBinding DeleteVisible}"
-                            IsEnabled="{TemplateBinding DeleteActive}">
+                            IsVisible="{TemplateBinding Button2Visible}"
+                            IsEnabled="{TemplateBinding Button2Active}">
 
                             <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="DeleteTapped" />
+                                <TapGestureRecognizer Tapped="Button2Tapped" />
                             </Border.GestureRecognizers>
 
                             <Label 
-                                Text="Delete"
+                                Text="{TemplateBinding Button2Text}"
                                 Style="{StaticResource actionButtonText}"/>
 
                         </Border>
 
                         <Border
                             Style="{StaticResource actionButton}"
-                            IsVisible="{TemplateBinding RemoveVisible}"
-                            IsEnabled="{TemplateBinding RemoveActive}">
+                            IsVisible="{TemplateBinding Button1Visible}"
+                            IsEnabled="{TemplateBinding Button1Active}">
 
                             <Border.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="RemoveTapped" />
+                                <TapGestureRecognizer Tapped="Button1Tapped" />
                             </Border.GestureRecognizers>
 
                             <Label 
-                                Text="Remove"
+                                Text="{TemplateBinding Button1Text}"
                                 Style="{StaticResource actionButtonText}"/>
 
                         </Border>

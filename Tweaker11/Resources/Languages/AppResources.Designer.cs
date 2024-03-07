@@ -61,6 +61,15 @@ namespace Tweaker11.Resources.Languages {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Activate.
+        /// </summary>
+        internal static string Activate {
+            get {
+                return ResourceManager.GetString("Activate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Clock.
         /// </summary>
         internal static string Alarms {
@@ -102,6 +111,24 @@ namespace Tweaker11.Resources.Languages {
         internal static string Clipchamp {
             get {
                 return ResourceManager.GetString("Clipchamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete.
+        /// </summary>
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Disable windows defender security notifications.
+        /// </summary>
+        internal static string DisableSecurityNotifications {
+            get {
+                return ResourceManager.GetString("DisableSecurityNotifications", resourceCulture);
             }
         }
         
@@ -210,6 +237,24 @@ namespace Tweaker11.Resources.Languages {
         internal static string QuickAssist {
             get {
                 return ResourceManager.GetString("QuickAssist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Remove.
+        /// </summary>
+        internal static string Remove {
+            get {
+                return ResourceManager.GetString("Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Restore.
+        /// </summary>
+        internal static string Restore {
+            get {
+                return ResourceManager.GetString("Restore", resourceCulture);
             }
         }
         

@@ -125,7 +125,7 @@
                     BindingContext="{Binding HomeViewModel}" />
 
                 <views:SystemPage
-                    BindingContext="{Binding SystemPageVisible}" />
+                    BindingContext="{Binding SystemViewModel}" />
 
                 <views:ApplicationsPage 
                     BindingContext="{Binding ApplicationsViewModel}" />

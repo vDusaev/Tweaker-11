@@ -24,15 +24,21 @@
                         Name="{Binding Name}"
                         Image="{Binding Image}"
                         Text="{Binding Text}"
-                        RestoreVisible="True"
-                        RemoveVisible="True"
-                        DeleteVisible="True"
-                        RestoreActive="{Binding RestoreActive}"
-                        RemoveActive="{Binding RemoveActive}"
-                        DeleteActive="{Binding DeleteActive}"
-                        EventRestore="RestoreTapped"
-                        EventRemove="RemoveTapped"
-                        EventDelete="DeleteTapped" />
+                        
+                        Button1Text="{extensions:Translate Remove}"
+                        Button1Visible="True"
+                        Button1Active="{Binding RemoveActive}"
+                        EventButton1="RemoveTapped"
+                        
+                        Button2Text="{extensions:Translate Delete}"
+                        Button2Visible="True"
+                        Button2Active="{Binding DeleteActive}"
+                        EventButton2="DeleteTapped"
+                        
+                        Button3Text="{extensions:Translate Restore}"
+                        Button3Visible="True"
+                        Button3Active="{Binding RestoreActive}"
+                        EventButton3="RestoreTapped" />
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>

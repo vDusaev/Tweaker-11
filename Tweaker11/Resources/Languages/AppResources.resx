@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
   <data name="Alarms" xml:space="preserve">
     <value>Clock</value>
   </data>
@@ -131,6 +134,12 @@
   </data>
   <data name="Clipchamp" xml:space="preserve">
     <value>Clipchamp - Video editor</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DisableSecurityNotifications" xml:space="preserve">
+    <value>Disable windows defender security notifications</value>
   </data>
   <data name="FeedbackHub" xml:space="preserve">
     <value>Feedback hub</value>
@@ -167,6 +176,12 @@
   </data>
   <data name="QuickAssist" xml:space="preserve">
     <value>Quick assist</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
   </data>
   <data name="Solitaire" xml:space="preserve">
     <value>Solitaire &amp; Casual Games</value>

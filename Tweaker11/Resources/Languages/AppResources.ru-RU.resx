@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Activate" xml:space="preserve">
+    <value>Активировать</value>
+  </data>
   <data name="Alarms" xml:space="preserve">
     <value>Будильники и часы</value>
   </data>
@@ -131,6 +134,12 @@
   </data>
   <data name="Clipchamp" xml:space="preserve">
     <value>Clipchamp - редактор видео</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="DisableSecurityNotifications" xml:space="preserve">
+    <value>Отключение уведомлений безопасности</value>
   </data>
   <data name="FeedbackHub" xml:space="preserve">
     <value>Центр отзывов</value>
@@ -167,6 +176,12 @@
   </data>
   <data name="QuickAssist" xml:space="preserve">
     <value>Быстрая поддержка</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Убрать</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Восстановить</value>
   </data>
   <data name="Solitaire" xml:space="preserve">
     <value>Solitaire Collection</value>
